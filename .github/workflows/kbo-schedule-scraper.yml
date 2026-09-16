@@ -1,10 +1,11 @@
-name: KBO schedule scraper
+name: KBO standings scraper
 
 on:
   schedule:
     # 00:00 UTC = 09:00 in Korea (Asia/Seoul, UTC+9) — zelfde tijdstip als
-    # npb-schedule-scraper.yml (vroeg in de ochtend lokale tijd, ná afloop
-    # van alle wedstrijden van de vorige avond).
+    # kbo-schedule-scraper.yml (vroeg in de ochtend lokale tijd, ná afloop
+    # van alle wedstrijden van de vorige avond, dus het klassement staat
+    # dan al vast).
     - cron: '0 0 * * *'
   workflow_dispatch:
 
@@ -26,13 +27,13 @@ jobs:
       - name: Installeer dependencies
         run: pip install requests beautifulsoup4
 
-      - name: Programma/uitslagen scrapen
-        run: python kbo_schedule_scraper.py
+      - name: Standen scrapen
+        run: python kbo_standings_scraper.py
 
       - name: Wijzigingen committen
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add kbo_schedule.json
-          git diff --staged --quiet || git commit -m "Update KBO schedule"
+          git add kbo_standings.json
+          git diff --staged --quiet || git commit -m "Update KBO standings"
           git push
