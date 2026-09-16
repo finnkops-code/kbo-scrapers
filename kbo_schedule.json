@@ -1,0 +1,99 @@
+{
+  "bijgewerkt": "2026-09-16T19:52:32Z",
+  "bron": "https://eng.koreabaseball.com/",
+  "season": 2026,
+  "results": [
+    {
+      "date": "2026-09-16",
+      "away_team": "KT",
+      "home_team": "HANWHA",
+      "away_score": 4,
+      "home_score": 4,
+      "venue": "DAEJEON",
+      "time": null
+    },
+    {
+      "date": "2026-09-16",
+      "away_team": "LG",
+      "home_team": "NC",
+      "away_score": 9,
+      "home_score": 2,
+      "venue": "CHANGWON",
+      "time": null
+    },
+    {
+      "date": "2026-09-16",
+      "away_team": "SSG",
+      "home_team": "LOTTE",
+      "away_score": 4,
+      "home_score": 1,
+      "venue": "SAJIK",
+      "time": null
+    },
+    {
+      "date": "2026-09-16",
+      "away_team": "SAMSUNG",
+      "home_team": "DOOSAN",
+      "away_score": 1,
+      "home_score": 3,
+      "venue": "JAMSIL",
+      "time": null
+    }
+  ],
+  "schedule": [
+    {
+      "date": "2026-09-17",
+      "away_team": "SSG",
+      "home_team": "NC",
+      "away_score": null,
+      "home_score": null,
+      "venue": "CHANGWON",
+      "time": "18:30"
+    },
+    {
+      "date": "2026-09-17",
+      "away_team": "KIWOOM",
+      "home_team": "KIA",
+      "away_score": null,
+      "home_score": null,
+      "venue": "GWANGJU",
+      "time": "18:30"
+    },
+    {
+      "date": "2026-09-18",
+      "away_team": "LG",
+      "home_team": "KT",
+      "away_score": null,
+      "home_score": null,
+      "venue": "SUWON",
+      "time": "18:30"
+    },
+    {
+      "date": "2026-09-18",
+      "away_team": "NC",
+      "home_team": "LOTTE",
+      "away_score": null,
+      "home_score": null,
+      "venue": "SAJIK",
+      "time": "18:30"
+    },
+    {
+      "date": "2026-09-18",
+      "away_team": "SAMSUNG",
+      "home_team": "HANWHA",
+      "away_score": null,
+      "home_score": null,
+      "venue": "DAEJEON",
+      "time": "18:30"
+    },
+    {
+      "date": "2026-09-18",
+      "away_team": "KIWOOM",
+      "home_team": "DOOSAN",
+      "away_score": null,
+      "home_score": null,
+      "venue": "JAMSIL",
+      "time": "18:30"
+    }
+  ]
+}
