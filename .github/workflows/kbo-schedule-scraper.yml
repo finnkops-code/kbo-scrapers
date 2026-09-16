@@ -1,0 +1,38 @@
+name: KBO schedule scraper
+
+on:
+  schedule:
+    # 00:00 UTC = 09:00 in Korea (Asia/Seoul, UTC+9) — zelfde tijdstip als
+    # npb-schedule-scraper.yml (vroeg in de ochtend lokale tijd, ná afloop
+    # van alle wedstrijden van de vorige avond).
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installeer dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Programma/uitslagen scrapen
+        run: python kbo_schedule_scraper.py
+
+      - name: Wijzigingen committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add kbo_schedule.json
+          git diff --staged --quiet || git commit -m "Update KBO schedule"
+          git push
